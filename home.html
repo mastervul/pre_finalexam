@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <style>
+        /* General Page Style */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-image: url('1.gif'); /* Background Image */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Container Style */
+        .container {
+            max-width: 400px;
+            width: 60%;
+            text-align: center;
+            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Header and User Info */
+        .header {
+            font-size: 36px;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .user-info {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        /* Image Container */
+        .image-container {
+            margin-bottom: 30px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Button Style */
+        .click-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .click-button:hover {
+            background-color: #45a049;
+        }
+
+        /* Logout Button */
+        .logout-btn {
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 16px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .logout-btn:hover {
+            background-color: #e53935;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <h1>Welcome to Your Dashboard</h1>
+        </div>
+
+        <!-- User Info Section -->
+        <div class="user-info">
+            <p id="welcomeMessage">Hello, User! You are logged in.</p>
+        </div>
+
+        <!-- Image Container -->
+        <div class="image-container">
+            <img src="4.gif" alt="Featured Image" />
+        </div>
+
+        <!-- Click Here Button -->
+        <button class="click-button" onclick="handleClick()">Click Here</button>
+
+        <!-- Logout Button -->
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </div>
+
+    <script>
+        // Handle the "Click Here" button action
+        function handleClick() {
+            // Optional: Confirm navigation before redirecting
+            if (confirm("Are you sure you want to continue?")) {
+                // Redirect to another page after clicking "Click Here"
+                window.location.href = "home2.html";  // Redirect to the desired page (replace with your page)
+            }
+        }
+
+        // Logout function to redirect to the login page or home page
+        function logout() {
+            // Optional: Confirm logout before redirecting
+            if (confirm("Are you sure you want to log out?")) {
+                // Redirect to the home page or any other page after logout
+                window.location.href = "login.html";  // Replace 'index.html' with your preferred logout destination
+            }
+        }
+    </script>
+
+</body>
+</html>
